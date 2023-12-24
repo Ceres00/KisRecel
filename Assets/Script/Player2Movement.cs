@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player2Movement : MonoBehaviour
 {
     private float vertical;
+    public int L = 0;
 
     [SerializeField] private float speed = 6f;
     [SerializeField] private float acceleration = 10f;

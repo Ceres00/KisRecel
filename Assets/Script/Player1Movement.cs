@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player1Movement : MonoBehaviour
 {
     private float vertical;
+    public int L = 0;
 
     [SerializeField] private float speed = 6f;
     [SerializeField] private float acceleration = 10f;
@@ -46,6 +47,7 @@ public class Player1Movement : MonoBehaviour
         {
             rb.velocity = new Vector2(0f, rb.velocity.y);
             Destroy(collision.gameObject);
+            L++;
         }
     }
 }
