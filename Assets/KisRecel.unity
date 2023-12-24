@@ -407,9 +407,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 482342578}
     m_Modifications:
+    - target: {fileID: 8018727994384073496, guid: f9969fe493f415947a88e876f06e618c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 43eb34d2b801d274eaa7e7ed4d77c2ca, type: 3}
     - target: {fileID: 8018727994384073497, guid: f9969fe493f415947a88e876f06e618c, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018727994384073497, guid: f9969fe493f415947a88e876f06e618c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.23963544
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018727994384073497, guid: f9969fe493f415947a88e876f06e618c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2169043
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018727994384073497, guid: f9969fe493f415947a88e876f06e618c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.79671
       objectReference: {fileID: 0}
     - target: {fileID: 8018727994384073497, guid: f9969fe493f415947a88e876f06e618c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -454,6 +470,14 @@ PrefabInstance:
     - target: {fileID: 8018727994384073499, guid: f9969fe493f415947a88e876f06e618c, type: 3}
       propertyPath: m_Name
       value: ObstaclePref (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018727994384073500, guid: f9969fe493f415947a88e876f06e618c, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 12.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018727994384073500, guid: f9969fe493f415947a88e876f06e618c, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 12.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9969fe493f415947a88e876f06e618c, type: 3}
@@ -515,7 +539,6 @@ GameObject:
   m_Component:
   - component: {fileID: 736049311}
   - component: {fileID: 736049310}
-  - component: {fileID: 736049312}
   m_Layer: 0
   m_Name: SnowEffect
   m_TagString: Untagged
@@ -591,18 +614,6 @@ Transform:
   m_Father: {fileID: 482342578}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &736049312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 736049309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e56d6ac55c8ac84baa8916a731ac6c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &816017674
 GameObject:
   m_ObjectHideFlags: 0
@@ -2027,13 +2038,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 482342578}
     m_Modifications:
+    - target: {fileID: 8018727994384073496, guid: f9969fe493f415947a88e876f06e618c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c96de5691c112c41b7f2f5899f7d5e4, type: 3}
     - target: {fileID: 8018727994384073497, guid: f9969fe493f415947a88e876f06e618c, type: 3}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8018727994384073497, guid: f9969fe493f415947a88e876f06e618c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1908687
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018727994384073497, guid: f9969fe493f415947a88e876f06e618c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1880268
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018727994384073497, guid: f9969fe493f415947a88e876f06e618c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.49157333
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018727994384073497, guid: f9969fe493f415947a88e876f06e618c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.8964378
+      value: -1.83
       objectReference: {fileID: 0}
     - target: {fileID: 8018727994384073497, guid: f9969fe493f415947a88e876f06e618c, type: 3}
       propertyPath: m_LocalPosition.y
