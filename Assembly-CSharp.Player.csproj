@@ -58,12 +58,13 @@
   <ItemGroup>
     <Compile Include="Assets\Script\ObstacleHit.cs" />
     <Compile Include="Assets\Script\ThrowSnow.cs" />
+    <Compile Include="Assets\Script\Level2Movement2.cs" />
     <Compile Include="Assets\Script\Player1Movement.cs" />
-    <Compile Include="Assets\Script\CMovingScript.cs" />
     <Compile Include="Assets\Script\FinishRace.cs" />
     <Compile Include="Assets\Script\Player2Movement.cs" />
     <Compile Include="Assets\Script\Level2Movement.cs" />
     <Compile Include="Assets\Script\Snow.cs" />
+    <Compile Include="Assets\Script\ObstacleSpawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
