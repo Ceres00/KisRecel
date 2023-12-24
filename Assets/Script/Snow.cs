@@ -5,10 +5,14 @@ using UnityEngine;
 public class Snow : MonoBehaviour
 {
     Rigidbody2D rb;
+    Level2Movement L1;
+    Level2Movement2 L2;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        L1 = GameObject.FindGameObjectWithTag("Player").GetComponent<Level2Movement>();
+        L2 = GameObject.FindGameObjectWithTag("Player2").GetComponent<Level2Movement2>();
     }
 
     void Update()
@@ -20,5 +24,13 @@ public class Snow : MonoBehaviour
     {
         if (collision.collider.tag != "Snowball")
         Destroy(gameObject);
+        if (collision.collider.tag == "Player")
+        {
+            L1.L++;
+        }
+        else if (collision.collider.tag == "Player2")
+        {
+            L2.L++;
+        }
     }
 }
