@@ -6,6 +6,10 @@ public class Level2Movement2 : MonoBehaviour
 {
     private float horizontal;
     public int L = 0;
+    public GameObject Level2;
+    public GameObject Win;
+    public GameObject Dikpik;
+    public GameObject Gift;
 
     [SerializeField] private float speed = 6f;
     [SerializeField] private float acceleration = 10f;
@@ -20,7 +24,11 @@ public class Level2Movement2 : MonoBehaviour
     }
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
+        horizontal = Input.GetAxisRaw("Horizontal2");
+        if(L == 3)
+        {
+            StartCoroutine(Finito());
+        }
     }
 
     private void FixedUpdate()
@@ -38,7 +46,17 @@ public class Level2Movement2 : MonoBehaviour
     {
         if (collision.collider.tag == "Player")
         {
-            rb.velocity = new Vector2(rb.velocity.x, Mathf.MoveTowards(rb.velocity.y, 4f, 10f));
+            rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.y, 4f, 10f), rb.velocity.y);
         }
+    }
+    IEnumerator Finito()
+    {
+        Gift.SetActive(true);
+        yield return new WaitForSeconds(4f);
+        Gift.SetActive(false);
+        Dikpik.SetActive(true);
+        yield return new WaitForSeconds(4f);
+        Dikpik.SetActive(false);
+        Win.SetActive(true);
     }
 }

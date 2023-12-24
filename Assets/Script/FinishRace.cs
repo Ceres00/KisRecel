@@ -6,6 +6,12 @@ public class FinishRace : MonoBehaviour
 {
     Player1Movement Score1;
     Player2Movement Score2;
+    public GameObject Level1;
+    public GameObject Level2;
+    public GameObject death;
+    public GameObject win;
+    public GameObject tie;
+    public GameObject back;
 
     [SerializeField] private Rigidbody2D rb;
     private void Awake()
@@ -26,15 +32,21 @@ public class FinishRace : MonoBehaviour
     {
         if (Score1.L > Score2.L)
         {
-            Debug.Log("Player 1 Won!");
+            Level1.SetActive(false);
+            death.SetActive(true);
+            StartCoroutine(NextLevel());
         }
         else if (Score2.L > Score1.L)
         {
-            Debug.Log("Player 2 Won!");
+            Level1.SetActive(false);
+            win.SetActive(true);
+            StartCoroutine(NextLevel());
         }
         else
         {
-            Debug.Log("It's a tie!");
+            Level1.SetActive(false);
+            tie.SetActive(true);
+            StartCoroutine(NextLevel());
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -42,12 +54,20 @@ public class FinishRace : MonoBehaviour
         if (collision.tag == "Player")
         {
             Finish();
-            Destroy(gameObject);
         }
         else if (collision.tag == "Player2")
         {
             Finish();
-            Destroy(gameObject);
         }
+    }
+    IEnumerator NextLevel()
+    {
+        yield return new WaitForSeconds(5f);
+        tie.SetActive(false);
+        win.SetActive(false);
+        death.SetActive(false);
+        Level2.SetActive(true);
+        back.SetActive(true);
+        Destroy(gameObject);
     }
 }

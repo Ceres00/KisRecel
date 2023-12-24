@@ -6,6 +6,8 @@ public class Level2Movement : MonoBehaviour
 {
     private float horizontal;
     public int L = 0;
+    public GameObject Level2;
+    public GameObject Death;
 
     [SerializeField] private float speed = 6f;
     [SerializeField] private float acceleration = 10f;
@@ -21,6 +23,11 @@ public class Level2Movement : MonoBehaviour
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
+        if (L == 3)
+        {
+            Level2.SetActive(false);
+            Death.SetActive(true);
+        }
     }
 
     private void FixedUpdate()
@@ -38,7 +45,7 @@ public class Level2Movement : MonoBehaviour
     {
         if (collision.collider.tag == "Player2")
         {
-            rb.velocity = new Vector2(rb.velocity.x, Mathf.MoveTowards(rb.velocity.y, 4f, 10f));
+            rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.y, 4f, 10f), rb.velocity.y);
         }
     }
 }

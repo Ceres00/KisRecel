@@ -20,10 +20,19 @@ public class ThrowSnow : MonoBehaviour
         Vector2 AimPosition = target.position;
         Vector2 direction = AimPosition - SnowPosition;
         transform.right = direction;
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (this.tag == "Player")
         {
-            Shoot();
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Shoot();
+            }
+        }
+        if (this.tag == "Player2")
+        {
+            if (Input.GetKeyDown(KeyCode.Keypad0))
+            {
+                Shoot();
+            }
         }
     }
 }

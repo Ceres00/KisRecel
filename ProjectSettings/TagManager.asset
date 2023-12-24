@@ -9,6 +9,7 @@ TagManager:
   - HitScan
   - HitScan2
   - Snowball
+  - StormHit
   layers:
   - Default
   - TransparentFX

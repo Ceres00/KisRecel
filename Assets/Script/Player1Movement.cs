@@ -46,8 +46,8 @@ public class Player1Movement : MonoBehaviour
         if (collision.tag == "HitScan")
         {
             rb.velocity = new Vector2(0f, rb.velocity.y);
-            Destroy(collision.gameObject);
             L++;
+            Destroy(collision.gameObject);
         }
     }
 }
