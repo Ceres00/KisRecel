@@ -8,6 +8,7 @@ TagManager:
   - Obstacle
   - HitScan
   - HitScan2
+  - Snowball
   layers:
   - Default
   - TransparentFX

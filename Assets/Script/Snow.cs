@@ -13,11 +13,12 @@ public class Snow : MonoBehaviour
 
     void Update()
     {
-        float angle = Mathf.Atan2(rb.velocity.x, rb.velocity.y) * Mathf.Rad2Deg * 2;
+        float angle = Mathf.Atan2(rb.velocity.x, rb.velocity.y) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.collider.tag != "Snowball")
         Destroy(gameObject);
     }
 }

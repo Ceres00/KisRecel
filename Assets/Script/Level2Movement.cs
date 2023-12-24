@@ -34,13 +34,11 @@ public class Level2Movement : MonoBehaviour
             rb.velocity = new Vector2(Mathf.Sign(rb.velocity.x * maxSpeed), rb.velocity.y);
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.tag == "HitScan")
+        if (collision.collider.tag == "Player2")
         {
-            rb.velocity = new Vector2(0f, rb.velocity.x);
-            Destroy(collision.gameObject);
-            L++;
+            rb.velocity = new Vector2(rb.velocity.x, Mathf.MoveTowards(rb.velocity.y, 4f, 10f));
         }
     }
 }
